@@ -32,3 +32,34 @@ for key,value in student_marks.items():
         average = sum/count
 
         print(f"Average : {average:.2f}")
+        
+        
+        
+        
+        
+ ********* ************ ******************
+ 
+ 
+ 
+n = int(input("Number of names : "))
+dict = {}
+
+for i in range(0,n):
+    name,*score = input("Enter Name and Score Sep by ',' ").split(",")
+    # this * is * operator due to which we can enter as many score we wat
+
+    scores = list(map(float,score))
+    dict[name] = scores
+
+query = input("Enter Name for average : ")
+
+for key,value in dict.items():
+    if query == key:
+        scor = 0
+        count = 0
+        for i in value:
+            scor += i
+            count += 1
+        average = (scor/count)
+
+        print(f"Average is {average:.2f}")
