@@ -1,0 +1,34 @@
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+
+
+********** ********** *************
+
+
+56.00
+
+
+
+
+n = int(input("How many Names : "))
+student_marks = {}
+
+for _ in range(n):
+    name,*line = input("Name and Score ").split()
+    scores = list(map(float,line))
+    student_marks[name] = scores
+query_name = input("query : ")
+
+for key,value in student_marks.items():
+    if query_name == key:
+        sum = 0
+        count = 0
+        for i in value:
+            sum += i
+            count += 1
+        average = sum/count
+
+        print(f"Average : {average:.2f}")
